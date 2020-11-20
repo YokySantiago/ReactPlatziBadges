@@ -1,0 +1,11 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply font-lato bg-platzi-gray;
+  }
+
+  h1 {
+    @apply text-3xl font-bold font-anton;
+  }
+}
