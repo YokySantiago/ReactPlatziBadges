@@ -12,7 +12,7 @@ class BadgeForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="bg-white p-4 rounded shadow-xl">
         <h1>New Attendant</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="flex flex-col my-2">
@@ -21,7 +21,7 @@ class BadgeForm extends Component {
               type="text"
               name="firstName"
               id="firstName"
-              className="px-4 py-2 rounded border border-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
               onChange={this.props.onChange}
               value={this.props.formValues.firstName}
             />
@@ -32,7 +32,7 @@ class BadgeForm extends Component {
               type="text"
               name="lastName"
               id="lastName"
-              className="px-4 py-2 rounded border border-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
               onChange={this.props.onChange}
               value={this.props.formValues.lastName}
             />
@@ -43,7 +43,7 @@ class BadgeForm extends Component {
               type="email"
               name="email"
               id="email"
-              className="px-4 py-2 rounded border border-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
               onChange={this.props.onChange}
               value={this.props.formValues.email}
             />
@@ -54,7 +54,7 @@ class BadgeForm extends Component {
               type="text"
               name="jobTitle"
               id="jobTitle"
-              className="px-4 py-2 rounded border border-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
               onChange={this.props.onChange}
               value={this.props.formValues.jobTitle}
             />
@@ -65,7 +65,7 @@ class BadgeForm extends Component {
               type="text"
               name="twitter"
               id="twitter"
-              className="px-4 py-2 rounded border border-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
               onChange={this.props.onChange}
               value={this.props.formValues.twitter}
             />
