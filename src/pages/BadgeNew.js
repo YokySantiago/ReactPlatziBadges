@@ -3,11 +3,13 @@ import Badge from "../components/Badge";
 
 import header from "./../assets/images/platziconf-logo.svg";
 import starImage from "./../assets/images/stars.svg";
+import badges from "../badges.json";
 
 import BadgeForm from "./../components/BadgeForm";
 
 class BadgeNew extends Component {
   state = {
+    label: "New",
     form: { firstName: "", lastName: "", email: "", jobTitle: "", twitter: "" },
   };
 
@@ -19,6 +21,25 @@ class BadgeNew extends Component {
       },
     });
   };
+
+  componentDidMount() {
+    const id = this.props.match.params.id;
+    if (id) {
+      const data = badges;
+      const element = data.find((item) => item.id === id);
+
+      this.setState({
+        label: "Edit",
+        form: {
+          firstName: element.firstName,
+          lastName: element.lastName,
+          email: element.email,
+          jobTitle: element.jobTitle,
+          twitter: element.twitter,
+        },
+      });
+    }
+  }
 
   render() {
     return (
@@ -34,17 +55,17 @@ class BadgeNew extends Component {
             <div className="col-span-2">
               <div className="w-4/5 mx-auto">
                 <Badge
-                  firstName={this.state.form.firstName}
-                  lastName={this.state.form.lastName}
-                  jobTitle={this.state.form.jobTitle}
-                  twitter={this.state.form.twitter}
-                  email={this.state.form.email}
-                  avatarUrl="https://www.gravatar.com/avatar?d=identicon"
+                  firstName={this.state.form.firstName || "First Name"}
+                  lastName={this.state.form.lastName || "Last Name"}
+                  jobTitle={this.state.form.jobTitle || "Job title"}
+                  twitter={this.state.form.twitter || "Twitter"}
+                  email={this.state.form.email || "Email"}
                 />
               </div>
             </div>
             <div className="relative top-0 -mt-24">
               <BadgeForm
+                label={this.state.label}
                 onChange={this.handleChange}
                 formValues={this.state.form}
               />

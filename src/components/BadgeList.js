@@ -1,16 +1,14 @@
 import { Component } from "react";
 
+import Gravatar from "./Gravatar";
+
 class BadgeList extends Component {
   renderBadgeList() {
-    const { avatarUrl, firstName, lastName, jobTitle, twitter } = this.props;
+    const { email, firstName, lastName, jobTitle, twitter } = this.props;
     return (
-      <div className="BadgeList">
+      <div className="BadgeList" onClick={this.props.onClick}>
         <div className="BadgeList__header">
-          <img
-            src={avatarUrl}
-            alt="Badge"
-            className="BadgeList__header-image"
-          />
+          <Gravatar email={email} className="BadgeList__header-image" />
         </div>
         <div className="BadgeList__content">
           <p className="BadgeList__name">

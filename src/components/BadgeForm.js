@@ -13,7 +13,7 @@ class BadgeForm extends Component {
   render() {
     return (
       <div className="BadgeForm">
-        <h1>New Attendant</h1>
+        <h1>{this.props.label} Attendant</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>

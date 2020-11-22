@@ -1,32 +1,27 @@
 import { Component } from "react";
-import confLogo from "./../assets/images/badge-header.svg";
 
+import confLogo from "./../assets/images/badge-header.svg";
+import Gravatar from "./Gravatar";
 class Badge extends Component {
   render() {
-    const { avatarUrl, firstName, lastName, jobTitle, twitter } = this.props;
+    const { firstName, lastName, jobTitle, twitter, email } = this.props;
     return (
       <div className="Badge">
         <div className="Badge__image">
           <img src={confLogo} alt="Logo de la conferencia" />
         </div>
         <div className="Badge__header">
-          <img
-            src={avatarUrl}
-            alt="Badge"
-            className="Badge__header-image"
-          />
+          <Gravatar className="Badge__header-image" email={email} />
           <h1>
-            {firstName ? firstName : "First Name"} <br />
-            {lastName ? lastName : "Last Name"}
+            {firstName} <br />
+            {lastName}
           </h1>
         </div>
         <div className="Badge__body">
-          <p className="Badge__jobtitle">{jobTitle ? jobTitle : "Job title"}</p>
-          <p>@{twitter ? twitter : "Twitter"}</p>
+          <p className="Badge__jobtitle">{jobTitle}</p>
+          <p>@{twitter}</p>
         </div>
-        <div className="Badge__footer">
-          #PlatziConf
-        </div>
+        <div className="Badge__footer">#PlatziConf</div>
       </div>
     );
   }
