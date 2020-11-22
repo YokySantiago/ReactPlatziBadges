@@ -1,0 +1,29 @@
+@layer components {
+  .Badge {
+    @apply bg-white shadow-xl rounded overflow-hidden;
+
+    &__image {
+      @apply pt-4 h-24 bg-platzi-black flex flex-col items-center;
+    }
+
+    &__header {
+      @apply flex flex-row justify-center items-center py-4;
+
+      &-image {
+        @apply rounded-full mr-4 w-20 h-20;
+      }
+    }
+
+    &__body {
+      @apply flex flex-col justify-center items-center py-2 bg-platzi-gray;
+    }
+
+    &__jobtitle {
+      @apply text-2xl;
+    }
+
+    &__footer {
+      @apply text-platzi-green h-14 flex flex-col justify-center items-center font-bold italic;
+    }
+  }
+}

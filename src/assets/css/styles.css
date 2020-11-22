@@ -2,5 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 @import "./base/base.css";
+
 @import "./components/components.css";
+@import "./components/general.css";
+@import "./components/badge.css";
+@import "./components/badgeList.css";
+@import "./components/badgeForm.css";
+
 @import "./utilities/utilities.css";

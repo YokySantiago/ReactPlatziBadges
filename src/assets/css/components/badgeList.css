@@ -1,0 +1,77 @@
+@layer components {
+  .BadgeList {
+    @apply bg-white shadow rounded overflow-hidden flex;
+
+    &__header {
+      @apply my-auto px-4;
+      &-image {
+        @apply rounded-full mr-4 h-16 w-16;
+      }
+    }
+
+    &__content {
+      @apply py-4 pr-4;
+    }
+
+    &__name {
+      @apply font-bold text-lg;
+    }
+
+    &__twitter {
+      @apply text-blue-400 text-xs;
+    }
+
+    &__jobtitle {
+      @apply text-base font-light;
+    }
+
+    &.loading {
+      @apply flex-row animate-pulse py-2;
+
+      .BadgeList__header {
+        @apply my-auto px-4 w-auto;
+      }
+
+      .BadgeList__circle {
+        @apply rounded-full mr-4 h-16 w-16 bg-gray-300;
+      }
+
+      .BadgeList__content {
+        @apply py-4 pr-4 w-full;
+      }
+
+      .BadgeList__field {
+        @apply bg-gray-300 mb-2 rounded;
+      }
+    }
+  }
+
+  @screen sm {
+    .BadgeList {
+      &__header {
+        @apply my-auto px-4;
+        &-image {
+          @apply rounded-full mr-4 w-20 h-20;
+        }
+      }
+
+      &__name {
+        @apply text-xl;
+      }
+
+      &__jobtitle {
+        @apply text-lg;
+      }
+
+      &__twitter {
+        @apply text-sm;
+      }
+
+      &.loading {
+        .BadgeList__circle {
+          @apply w-20 h-20;
+        }
+      }
+    }
+  }
+}

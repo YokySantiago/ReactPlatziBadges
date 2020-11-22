@@ -1,0 +1,5 @@
+@layer components {
+  .BadgeForm {
+    @apply bg-white p-4 rounded shadow-xl;
+  }
+}

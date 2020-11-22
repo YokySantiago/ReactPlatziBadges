@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 
 import starImage from "./../assets/images/stars.svg";
-import header from "./../assets/images/badge-header.svg";
+import header from "./../assets/images/platziconf-logo.svg";
 
 import BadgeList from "./../components/BadgeList";
 
@@ -19,7 +19,7 @@ class Badges extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.feachData();
-    }, 500);
+    }, 5000);
   }
 
   feachData = () => {
@@ -83,10 +83,7 @@ class Badges extends Component {
         </div>
         <div className="container mx-auto">
           <div className="w-full sm:w-8/12 mx-auto flex flex-row justify-end mb-4 sm:px-none px-4">
-            <Link
-              to="/badges/new"
-              className="px-4 py-2 bg-platzi-green text-white rounded"
-            >
+            <Link to="/badges/new" className="btn">
               New badge
             </Link>
           </div>

@@ -1,0 +1,23 @@
+@layer components {
+  .form {
+    &-group {
+      @apply flex flex-col my-2;
+    }
+
+    &-control {
+      @apply px-4 py-2 rounded border border-gray-300 bg-platzi-gray text-sm;
+
+      &:focus {
+        @apply outline-blue rounded;
+      }
+    }
+  }
+
+  .btn {
+    @apply px-8 py-2 bg-platzi-green rounded text-white shadow;
+
+    &:focus {
+      @apply outline-none;
+    }
+  }
+}

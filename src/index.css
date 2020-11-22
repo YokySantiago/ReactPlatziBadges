@@ -587,6 +587,243 @@ h1 {
   }
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+.form-control {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 244, 247, var(--tw-bg-opacity));
+    --tw-border-opacity: 1;
+    border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+    border-radius: 0.25rem;
+    border-width: 1px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+.form-control:focus {
+      border-radius: 0.25rem;
+      outline: 2px solid #1C3643;
+      outline-offset: 0;
+    }
+
+.btn {
+  --tw-bg-opacity: 1;
+  background-color: rgba(152, 202, 63, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.btn:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+.Badge {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  overflow: hidden;
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.Badge__image {
+    --tw-bg-opacity: 1;
+    background-color: rgba(27, 27, 37, var(--tw-bg-opacity));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 6rem;
+    padding-top: 1rem;
+  }
+
+.Badge__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+.Badge__header-image {
+      border-radius: 9999px;
+      height: 5rem;
+      margin-right: 1rem;
+      width: 5rem;
+    }
+
+.Badge__body {
+    --tw-bg-opacity: 1;
+    background-color: rgba(244, 244, 247, var(--tw-bg-opacity));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+.Badge__jobtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+.Badge__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    height: 3.5rem;
+    --tw-text-opacity: 1;
+    color: rgba(152, 202, 63, var(--tw-text-opacity));
+    font-style: italic;
+  }
+
+.BadgeList {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  display: flex;
+  overflow: hidden;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.BadgeList__header {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+.BadgeList__header-image {
+      border-radius: 9999px;
+      height: 4rem;
+      margin-right: 1rem;
+      width: 4rem;
+    }
+
+.BadgeList__content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+
+.BadgeList__name {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+.BadgeList__twitter {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    --tw-text-opacity: 1;
+    color: rgba(96, 165, 250, var(--tw-text-opacity));
+  }
+
+.BadgeList__jobtitle {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+.BadgeList.loading {
+    flex-direction: row;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+.BadgeList.loading .BadgeList__header {
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: auto;
+    }
+
+.BadgeList.loading .BadgeList__circle {
+      --tw-bg-opacity: 1;
+      background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+      border-radius: 9999px;
+      height: 4rem;
+      margin-right: 1rem;
+      width: 4rem;
+    }
+
+.BadgeList.loading .BadgeList__content {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+    }
+
+.BadgeList.loading .BadgeList__field {
+      --tw-bg-opacity: 1;
+      background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
+      border-radius: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+@media (min-width: 640px) {
+    .BadgeList__header {
+      margin-top: auto;
+      margin-bottom: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+      .BadgeList__header-image {
+        border-radius: 9999px;
+        height: 5rem;
+        margin-right: 1rem;
+        width: 5rem;
+      }
+    .BadgeList__name {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    .BadgeList__jobtitle {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    .BadgeList__twitter {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+      .BadgeList.loading .BadgeList__circle {
+        height: 5rem;
+        width: 5rem;
+      }
+}
+
+.BadgeForm {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  padding: 1rem;
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .space-y-0 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));

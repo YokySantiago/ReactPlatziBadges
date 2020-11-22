@@ -12,69 +12,65 @@ class BadgeForm extends Component {
 
   render() {
     return (
-      <div className="bg-white p-4 rounded shadow-xl">
+      <div className="BadgeForm">
         <h1>New Attendant</h1>
         <form onSubmit={this.handleSubmit}>
-          <div className="flex flex-col my-2">
+          <div className="form-group">
             <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               name="firstName"
               id="firstName"
-              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="form-control"
               onChange={this.props.onChange}
               value={this.props.formValues.firstName}
             />
           </div>
-          <div className="flex flex-col my-2">
+          <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               name="lastName"
               id="lastName"
-              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="form-control"
               onChange={this.props.onChange}
               value={this.props.formValues.lastName}
             />
           </div>
-          <div className="flex flex-col my-2">
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"
               id="email"
-              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="form-control"
               onChange={this.props.onChange}
               value={this.props.formValues.email}
             />
           </div>
-          <div className="flex flex-col my-2">
+          <div className="form-group">
             <label htmlFor="jobTitle">Job title</label>
             <input
               type="text"
               name="jobTitle"
               id="jobTitle"
-              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="form-control"
               onChange={this.props.onChange}
               value={this.props.formValues.jobTitle}
             />
           </div>
-          <div className="flex flex-col my-2">
+          <div className="form-group">
             <label htmlFor="twitter">Twitter</label>
             <input
               type="text"
               name="twitter"
               id="twitter"
-              className="px-4 py-2 rounded border border-gray-300 bg-platzi-gray focus:outline-blue focus:rounded text-sm"
+              className="form-control"
               onChange={this.props.onChange}
               value={this.props.formValues.twitter}
             />
           </div>
-          <button
-            type="submit"
-            className="px-8 py-2 bg-platzi-green rounded text-white focus:outline-none"
-            onClick={this.handleClick}
-          >
+          <button type="submit" className="btn" onClick={this.handleClick}>
             Save
           </button>
         </form>

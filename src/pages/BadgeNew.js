@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Badge from "../components/Badge";
 
-import header from "./../assets/images/badge-header.svg";
+import header from "./../assets/images/platziconf-logo.svg";
 import starImage from "./../assets/images/stars.svg";
 
 import BadgeForm from "./../components/BadgeForm";
@@ -24,7 +24,7 @@ class BadgeNew extends Component {
     return (
       <>
         <div
-          className="w-screen py-8 bg-no-repeat mb-4 text-white"
+          className="w-screen py-8 bg-no-repeat mb-4 text-white flex flex-col items-cente"
           style={{ background: `url(${starImage}), #1B1B25` }}
         >
           <img src={header} alt="Banner Hero" />

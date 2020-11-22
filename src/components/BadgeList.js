@@ -1,24 +1,23 @@
 import { Component } from "react";
-import confLogo from "./../assets/images/badge-header.svg";
 
 class BadgeList extends Component {
   renderBadgeList() {
     const { avatarUrl, firstName, lastName, jobTitle, twitter } = this.props;
     return (
-      <div className="bg-white shadow rounded overflow-hidden flex">
-        <div className="my-auto px-4">
+      <div className="BadgeList">
+        <div className="BadgeList__header">
           <img
             src={avatarUrl}
             alt="Badge"
-            className="rounded-full mr-4 sm:w-20 sm:h-20 h-16 w-16"
+            className="BadgeList__header-image"
           />
         </div>
-        <div className="py-4 pr-4">
-          <p className="font-bold sm:text-xl text-lg">
+        <div className="BadgeList__content">
+          <p className="BadgeList__name">
             {firstName} {lastName}
           </p>
-          <p className="text-blue-400 sm:text-sm text-xs">@{twitter}</p>
-          <p className="sm:text-lg text-base font-light">{jobTitle}</p>
+          <p className="BadgeList__twitter">@{twitter}</p>
+          <p className="BadgeList__jobtitle">{jobTitle}</p>
         </div>
       </div>
     );
@@ -26,14 +25,14 @@ class BadgeList extends Component {
 
   renderLoading() {
     return (
-      <div className="bg-white shadow rounded overflow-hidden flex flex-row animate-pulse py-2">
-        <div className="my-auto px-4 w-auto">
-          <div className="rounded-full mr-4 sm:w-20 sm:h-20 h-16 w-16 bg-gray-300" />
+      <div className="BadgeList loading">
+        <div className="BadgeList__header">
+          <div className="BadgeList__circle" />
         </div>
-        <div className="py-4 pr-4 w-full">
-          <div className="h-6 bg-gray-300 w-2/4 mb-2 rounded" />
-          <div className="h-3 bg-gray-300 w-1/4 mb-2 rounded" />
-          <div className="h-4 bg-gray-300 w-3/4 mb-2 rounded" />
+        <div className="BadgeList__content">
+          <div className="h-6 BadgeList__field w-2/4" />
+          <div className="h-3 BadgeList__field w-1/4" />
+          <div className="h-4 BadgeList__field w-3/4" />
         </div>
       </div>
     );
