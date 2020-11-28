@@ -5,19 +5,23 @@
     }
 
     &-control {
-      @apply px-4 py-2 rounded border border-gray-300 bg-platzi-gray text-sm;
-
-      &:focus {
-        @apply outline-blue rounded;
-      }
+      @apply px-4 py-2 rounded border border-gray-300 bg-platzi-gray text-sm focus:outline-none focus:ring-2;
+      @apply focus:ring-offset-0 focus:ring-platzi-blue;
     }
   }
 
   .btn {
-    @apply px-8 py-2 bg-platzi-green rounded text-white shadow;
+    @apply bg-platzi-green;
+    @apply w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2;
+    @apply text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-0;
+    @apply focus:ring-green-400 sm:mr-3 sm:w-auto sm:text-sm;
 
-    &:focus {
-      @apply outline-none;
+    &--error {
+      @apply bg-red-600  hover:bg-red-700 focus:ring-red-500;
+    }
+
+    &--cancel {
+      @apply border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-400;
     }
   }
 }

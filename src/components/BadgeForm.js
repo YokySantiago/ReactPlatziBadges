@@ -1,6 +1,12 @@
 import { Component } from "react";
 
+import DesactiveModal from "./DesactiveModal";
+
 class BadgeForm extends Component {
+  state = {
+    isOpened: false,
+  };
+
   handleClick = (e) => {
     console.log("Botton was clicked");
   };
@@ -8,6 +14,14 @@ class BadgeForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("Botton was submitted");
+  };
+
+  handleDelete = (e) => {
+    this.setState({ isOpened: true });
+  };
+
+  handleCloseModal = (e) => {
+    this.setState({ isOpened: false });
   };
 
   render() {
@@ -70,10 +84,26 @@ class BadgeForm extends Component {
               value={this.props.formValues.twitter}
             />
           </div>
-          <button type="submit" className="btn" onClick={this.handleClick}>
-            Save
-          </button>
+          <div>
+            <button type="submit" className="btn" onClick={this.handleClick}>
+              Save
+            </button>
+
+            <button
+              type="submit"
+              className="btn btn--error"
+              onClick={this.handleDelete}
+            >
+              Delete
+            </button>
+          </div>
         </form>
+        <DesactiveModal
+          isOpened={this.state.isOpened}
+          onClose={this.handleCloseModal}
+          title="Deactivate badge"
+          message="Are you sure you want to deactivate your badge? All of your data will be permanently removed. This action cannot be undone."
+        />
       </div>
     );
   }

@@ -603,35 +603,118 @@ h1 {
     border-width: 1px;
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+.form-control:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+.form-control{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-.form-control:focus {
-      border-radius: 0.25rem;
-      outline: 2px solid #1C3643;
-      outline-offset: 0;
-    }
+.form-control:focus{
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+.form-control:focus{
+    --tw-ring-offset-width: 0px;
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(28, 54, 67, var(--tw-ring-opacity));
+  }
 
 .btn {
   --tw-bg-opacity: 1;
   background-color: rgba(152, 202, 63, var(--tw-bg-opacity));
-  border-radius: 0.25rem;
+  border-color: transparent;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  display: inline-flex;
+  justify-content: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem
+}
+
+.btn:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-offset-width: 0px;
+}
+
+.btn{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.btn:focus {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
+.btn:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(52, 211, 153, var(--tw-ring-opacity));
+}
+
+@media (min-width: 640px){
+  .btn{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-right: 0.75rem;
+    width: auto;
+  }
+}
+
+.btn--error {
+    --tw-bg-opacity: 1;
+    background-color: rgba(220, 38, 38, var(--tw-bg-opacity));
+  }
+
+.btn--error:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
+  }
+
+.btn--error:focus{
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(239, 68, 68, var(--tw-ring-opacity));
+  }
+
+.btn--cancel {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  }
+
+.btn--cancel:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  }
+
+.btn--cancel{
+    --tw-border-opacity: 1;
+    border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  }
+
+.btn--cancel:focus{
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(156, 163, 175, var(--tw-ring-opacity));
+  }
+
+.btn--cancel{
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
   }
 
 .Badge {

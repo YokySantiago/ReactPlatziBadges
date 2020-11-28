@@ -25,7 +25,7 @@ class Home extends Component {
               to="/badges"
               className="px-4 py-2 bg-platzi-green text-white rounded"
             >
-                Start Now
+              Start Now
             </Link>
           </div>
           <img src={header} alt="Banner Hero" className="col-span-2 w-full" />
